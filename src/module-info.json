@@ -1,13 +1,22 @@
 {
-    "name": "Sample Internal Module",
-    "id": "developer.Sample_Internal_Module",
-    "author": "developer",
+    "name": "Display Settings",
+    "id": "aarontburn.Display_Settings",
+    "author": "aarontburn",
     "version": "1.0.0",
-    "description": "A developer template to create a internal, no-gui module for Nexus.",
-    "build-version": 1,
-    "platforms": [],
-    "link": "https://github.com/aarontburn/nexus-template-internal",
+    "description": "Adds a few display setting to Nexus.",
+    "platforms": [
+        "win32",
+        "darwin",
+        "linux"
+    ],
+    "link": "https://github.com/aarontburn/nexus-display-settings",
+    "git-latest": {
+        "git-username": "aarontburn",
+        "git-repo-name": "nexus-display-settings"
+    },
+    "author-id": "683193056e5989838dcf772c",
     "build": {
+        "build-version": 2,
         "excluded": [
             "electron.ts"
         ],
