@@ -1,0 +1,33 @@
+{
+    "name": "Sample Internal Module",
+    "id": "developer.Sample_Internal_Module",
+    "author": "developer",
+    "version": "1.0.0",
+    "description": "A developer template to create a internal, no-gui module for Nexus.",
+    "build-version": 1,
+    "platforms": [],
+    "link": "https://github.com/aarontburn/nexus-template-internal",
+    "build": {
+        "excluded": [
+            "electron.ts"
+        ],
+        "included": [],
+        "process": "./process/main.js",
+        "replace": [
+            {
+                "from": "{EXPORTED_MODULE_ID}",
+                "to": "%id%",
+                "at": [
+                    "./process/main.ts"
+                ]
+            },
+            {
+                "from": "{EXPORTED_MODULE_NAME}",
+                "to": "%name%",
+                "at": [
+                    "./process/main.ts"
+                ]
+            }
+        ]
+    }
+}
