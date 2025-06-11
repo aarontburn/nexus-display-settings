@@ -44,15 +44,15 @@ export default class SampleProcess extends Process {
             const window: BaseWindow = (await this.requestExternal("nexus.Main", "get-primary-window")).body;
             window.setKiosk(inKioskMode)
             console.info(`[${MODULE_NAME}] ${inKioskMode ? "Enabling" : "Disabling"} kiosk mode`);
+
+            
         } else if (modifiedSetting?.getAccessID() === "fullscreen") {
             const inFullScreen: boolean = modifiedSetting.getValue() as boolean;
 
             const window: BaseWindow = (await this.requestExternal("nexus.Main", "get-primary-window")).body;
-            window.setSimpleFullScreen(modifiedSetting.getValue() as boolean)
+            window.setFullScreen(modifiedSetting.getValue() as boolean)
 
             console.info(`[${MODULE_NAME}] ${inFullScreen ? "Enabling" : "Disabling"} fullscreen mode`);
-
-
         }
 
     }
